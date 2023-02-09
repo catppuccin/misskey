@@ -1,0 +1,238 @@
+#!/bin/sh -eu
+# vim:fileencoding=utf-8:ts=4:et
+
+# _print_theme [flavour] [accent] [uuid]
+_print_theme() {
+    uuid="$3"
+    case "$1" in
+        'latte')
+            rosewater="#dc8a78"
+            flamingo="#dd7878"
+            pink="#ea76cb"
+            mauve="#8839ef"
+            red="#d20f39"
+            maroon="#e64553"
+            peach="#fe640b"
+            yellow="#df8e1d"
+            green="#40a02b"
+            teal="#179299"
+            sky="#04a5e5"
+            sapphire="#209fb5"
+            blue="#1e66f5"
+            lavender="#7287fd"
+            text="#4c4f69"
+            subtext1="#5c5f77"
+            subtext0="#6c6f85"
+            overlay2="#7c7f93"
+            overlay1="#8c8fa1"
+            overlay0="#9ca0b0"
+            surface2="#acb0be"
+            surface1="#bcc0cc"
+            surface0="#ccd0da"
+            base="#eff1f5"
+            mantle="#e6e9ef"
+            crust="#dce0e8"
+            ;;
+        'frappe')
+            rosewater="#f2d5cf"
+            flamingo="#eebebe"
+            pink="#f4b8e4"
+            mauve="#ca9ee6"
+            red="#e78284"
+            maroon="#ea999c"
+            peach="#ef9f76"
+            yellow="#e5c890"
+            green="#a6d189"
+            teal="#81c8be"
+            sky="#99d1db"
+            sapphire="#85c1dc"
+            blue="#8caaee"
+            lavender="#babbf1"
+            text="#c6d0f5"
+            subtext1="#b5bfe2"
+            subtext0="#a5adce"
+            overlay2="#949cbb"
+            overlay1="#838ba7"
+            overlay0="#737994"
+            surface2="#626880"
+            surface1="#51576d"
+            surface0="#414559"
+            base="#303446"
+            mantle="#292c3c"
+            crust="#232634"
+            ;;
+        'macchiato')
+            rosewater="#f4dbd6"
+            flamingo="#f0c6c6"
+            pink="#f5bde6"
+            mauve="#c6a0f6"
+            red="#ed8796"
+            maroon="#ee99a0"
+            peach="#f5a97f"
+            yellow="#eed49f"
+            green="#a6da95"
+            teal="#8bd5ca"
+            sky="#91d7e3"
+            sapphire="#7dc4e4"
+            blue="#8aadf4"
+            lavender="#b7bdf8"
+            text="#cad3f5"
+            subtext1="#b8c0e0"
+            subtext0="#a5adcb"
+            overlay2="#939ab7"
+            overlay1="#8087a2"
+            overlay0="#6e738d"
+            surface2="#5b6078"
+            surface1="#494d64"
+            surface0="#363a4f"
+            base="#24273a"
+            mantle="#1e2030"
+            crust="#181926"
+            ;;
+        'mocha')
+            rosewater="#f5e0dc"
+            flamingo="#f2cdcd"
+            pink="#f5c2e7"
+            mauve="#cba6f7"
+            red="#f38ba8"
+            maroon="#eba0ac"
+            peach="#fab387"
+            yellow="#f9e2af"
+            green="#a6e3a1"
+            teal="#94e2d5"
+            sky="#89dceb"
+            sapphire="#74c7ec"
+            blue="#89b4fa"
+            lavender="#b4befe"
+            text="#cdd6f4"
+            subtext1="#bac2de"
+            subtext0="#a6adc8"
+            overlay2="#9399b2"
+            overlay1="#7f849c"
+            overlay0="#6c7086"
+            surface2="#585b70"
+            surface1="#45475a"
+            surface0="#313244"
+            base="#1e1e2e"
+            mantle="#181825"
+            crust="#11111b"
+            ;;
+        *)
+            printf 'invalid flavour: %s\n' "$flavour"
+            exit 1
+            ;;
+    esac
+
+    accent=$(eval "printf '%s' \"\$$2\"") #< weird thingy - evaluates to one of the variables above
+
+    theme_type=$(if [ "$1" = 'latte' ]; then
+        printf 'light'
+    else
+        printf 'dark'
+    fi)
+
+    printf \
+"{
+    id: '$uuid',
+    base: '$theme_type',
+    name: 'Catppuccin $1 $2',
+    props: {
+        X2: ':darken<2<@panel',
+        X3: 'rgba(255, 255, 255, 0.05)',
+        X4: 'rgba(255, 255, 255, 0.1)',
+        X5: 'rgba(255, 255, 255, 0.05)',
+        X6: 'rgba(255, 255, 255, 0.15)',
+        X7: 'rgba(255, 255, 255, 0.05)',
+        X8: ':lighten<5<@accent',
+        X9: ':darken<5<@accent',
+        bg: '$crust',
+        fg: '$text',
+        X10: ':alpha<0.4<@accent',
+        X11: 'rgba(0, 0, 0, 0.3)',
+        X12: 'rgba(255, 255, 255, 0.1)',
+        X13: 'rgba(255, 255, 255, 0.15)',
+        X14: ':alpha<0.5<@navBg',
+        X15: ':alpha<0<@panel',
+        X16: ':alpha<0.7<@panel',
+        X17: ':alpha<0.8<@bg',
+        cwBg: '$surface1',
+        cwFg: '$subtext1',
+        link: '$blue',
+        warn: '$peach',
+        badge: '$blue',
+        error: '$red',
+        focus: ':alpha<0.3<@accent',
+        navBg: '@panel',
+        navFg: '@fg',
+        panel: ':lighten<3<@bg',
+        popup: ':lighten<3<@panel',
+        accent: '$accent',
+        header: ':alpha<0.7<@panel',
+        infoBg: '$surface0',
+        infoFg: '$subtext0',
+        renote: '$blue',
+        shadow: 'rgba(0, 0, 0, 0.3)',
+        divider: 'rgba(255, 255, 255, 0.1)',
+        hashtag: '$sapphire',
+        mention: '@accent',
+        modalBg: 'rgba(0, 0, 0, 0.5)',
+        success: '$green',
+        buttonBg: 'rgba(255, 255, 255, 0.05)',
+        switchBg: 'rgba(255, 255, 255, 0.15)',
+        acrylicBg: ':alpha<0.5<@bg',
+        cwHoverBg: '$surface2',
+        indicator: '@accent',
+        mentionMe: '@mention',
+        messageBg: '@bg',
+        navActive: '@accent',
+        accentedBg: ':alpha<0.15<@accent',
+        codeNumber: '$green',
+        codeString: '$peach',
+        fgOnAccent: '$base',
+        infoWarnBg: '$surface0',
+        infoWarnFg: '$subtext1',
+        navHoverFg: ':lighten<17<@fg',
+        swutchOnBg: '@accentedBg',
+        swutchOnFg: '@accent',
+        codeBoolean: '@accent',
+        dateLabelFg: '@fg',
+        deckDivider: '$overlay0',
+        inputBorder: 'rgba(255, 255, 255, 0.1)',
+        panelBorder: 'solid 1px var(--divider)',
+        swutchOffBg: 'rgba(255, 255, 255, 0.1)',
+        swutchOffFg: '@fg',
+        accentDarken: ':darken<10<@accent',
+        acrylicPanel: ':alpha<0.5<@panel',
+        navIndicator: '@indicator',
+        windowHeader: ':alpha<0.85<@panel',
+        accentLighten: ':lighten<10<@accent',
+        buttonHoverBg: 'rgba(255, 255, 255, 0.1)',
+        driveFolderBg: ':alpha<0.3<@accent',
+        fgHighlighted: ':lighten<3<@fg',
+        fgTransparent: ':alpha<0.5<@fg',
+        panelHeaderBg: ':lighten<3<@panel',
+        panelHeaderFg: '@fg',
+        buttonGradateA: '@accent',
+        buttonGradateB: ':hue<20<@accent',
+        htmlThemeColor: '@bg',
+        panelHighlight: ':lighten<3<@panel',
+        listItemHoverBg: 'rgba(255, 255, 255, 0.03)',
+        scrollbarHandle: 'rgba(255, 255, 255, 0.2)',
+        inputBorderHover: 'rgba(255, 255, 255, 0.2)',
+        wallpaperOverlay: 'rgba(0, 0, 0, 0.5)',
+        fgTransparentWeak: ':alpha<0.75<@fg',
+        panelHeaderDivider: 'rgba(0, 0, 0, 0)',
+        scrollbarHandleHover: 'rgba(255, 255, 255, 0.4)',
+    },
+    author: 'somebody ¯\\_(ツ)_/¯',
+}" | sed 's/^[ \t]\+//' | tr -d '\n' # < remove excess whitespace
+}
+
+uuid_line=1
+for flavour in latte macchiato frappe mocha; do
+    for accent in blue flamingo green lavender maroon mauve peach pink red rosewater sapphire sky teal yellow; do
+        uuid=$(sed -n "$uuid_line"'p' uuid-list)
+        _print_theme "$flavour" "$accent" "$uuid" > "themes/catppuccin-$flavour-$accent.json5"
+        uuid_line=$((uuid_line+1))
+    done
+done
