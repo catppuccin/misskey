@@ -40,6 +40,10 @@
 2. Copy the contents of the flavour/accent you want from the `src/themes` directory.
 3. Paste into theme box, and click install.
 
+### Forks
+
+This theme also works on Misskey forks, such as [Calckey](https://codeberg.org/calckey/calckey) and [Foundkey](https://akkoma.dev/FoundKeyGang/FoundKey).
+
 ## 💝 Thanks to
 
 - [Nonetrix](https://github.com/nonetrix)
