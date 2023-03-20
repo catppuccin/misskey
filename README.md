@@ -36,13 +36,18 @@
 
 ## Usage
 
+### Calckey
+Frappe and Mocha themes are now included by default with Calckey! 🥳
+
+Go to Settings -> Themes, and select a Catppuccin theme from the dropdown.
+
+### Manual Install
 1. Go to Settings -> Themes -> Install a theme.
 2. Copy the contents of the flavour/accent you want from the `src/themes` directory.
 3. Paste into theme box, and click install.
 
 ### Forks
-
-This theme also works on Misskey forks, such as [Calckey](https://codeberg.org/calckey/calckey) and [Foundkey](https://akkoma.dev/FoundKeyGang/FoundKey).
+This theme works on Misskey forks, such as [Calckey](https://codeberg.org/calckey/calckey) and [Foundkey](https://akkoma.dev/FoundKeyGang/FoundKey).
 
 ## 💝 Thanks to
 
