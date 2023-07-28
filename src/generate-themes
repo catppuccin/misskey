@@ -232,7 +232,7 @@ uuid_line=1
 for flavour in latte macchiato frappe mocha; do
     for accent in blue flamingo green lavender maroon mauve peach pink red rosewater sapphire sky teal yellow; do
         uuid=$(sed -n "$uuid_line"'p' uuid-list)
-        _print_theme "$flavour" "$accent" "$uuid" > "themes/catppuccin-$flavour-$accent.json5"
+        _print_theme "$flavour" "$accent" "$uuid" > "themes/$flavour/catppuccin-$flavour-$accent.json5"
         uuid_line=$((uuid_line+1))
     done
 done
