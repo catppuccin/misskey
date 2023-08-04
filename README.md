@@ -36,8 +36,8 @@
 
 ## Usage
 
-### Calckey
-Frappe and Mocha themes are now included by default with Calckey! 🥳
+### Firefish
+Frappe and Mocha themes are now included by default with Firefish! 🥳
 
 Go to Settings -> Themes, and select a Catppuccin theme from the dropdown.
 
@@ -47,7 +47,7 @@ Go to Settings -> Themes, and select a Catppuccin theme from the dropdown.
 3. Paste into theme box, and click install.
 
 ### Forks
-This theme works on Misskey forks, such as [Calckey](https://codeberg.org/calckey/calckey) and [Foundkey](https://akkoma.dev/FoundKeyGang/FoundKey).
+This theme works on Misskey forks, such as [Firefish](https://git.joinfirefish.org/firefish/firefish) and [Foundkey](https://akkoma.dev/FoundKeyGang/FoundKey).
 
 ## 💝 Thanks to
 
