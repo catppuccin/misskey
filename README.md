@@ -12,42 +12,43 @@
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/catb00mer/misskey/main/assets/preview.webp"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="https://raw.githubusercontent.com/catb00mer/misskey/main/assets/previews/latte.webp"/>
+<img src="assets/previews/latte.webp"/>
 </details>
 <details>
 <summary>🪴 Frappé</summary>
-<img src="https://raw.githubusercontent.com/catb00mer/misskey/main/assets/previews/frappe.webp"/>
+<img src="assets/previews/frappe.webp"/>
 </details>
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="https://raw.githubusercontent.com/catb00mer/misskey/main/assets/previews/macchiato.webp"/>
+<img src="assets/previews/macchiato.webp"/>
 </details>
 <details>
 <summary>🌿 Mocha</summary>
-<img src="https://raw.githubusercontent.com/catb00mer/misskey/main/assets/previews/mocha.webp"/>
+<img src="assets/previews/mocha.webp"/>
 </details>
 
 ## Usage
 
+> [!NOTE]
+> This theme works on Misskey forks, such as [Firefish](https://git.joinfirefish.org/firefish/firefish) and [Foundkey](https://akkoma.dev/FoundKeyGang/FoundKey).
+
 ### Firefish
-Frappe and Mocha themes are now included by default with Firefish! 🥳
 
-Go to Settings -> Themes, and select a Catppuccin theme from the dropdown.
+The Frappe and Mocha flavors are now included by default with Firefish! 🥳
 
-### Manual Install
-1. Go to Settings -> Themes -> Install a theme.
-2. Copy the contents of the flavour/accent you want from the `src/themes` directory.
-3. Paste into theme box, and click install.
+Go to **Settings** > **Themes**, and select a Catppuccin theme from the dropdown.
 
-### Forks
-This theme works on Misskey forks, such as [Firefish](https://git.joinfirefish.org/firefish/firefish) and [Foundkey](https://akkoma.dev/FoundKeyGang/FoundKey).
+### Manual
+
+1. Go to **Settings** > **Themes** > **Install a theme**.
+2. Copy the contents of the flavor and accent combination you want from [`themes`](./themes/) into the theme box and click install.
 
 ## 💝 Thanks to
 
