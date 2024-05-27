@@ -10,7 +10,7 @@ whiskers:
 {%- set palette = flavor.colors -%}
 
 {
-  id: '{{ read_file(path="uuids.txt") | split(pat="\n") | nth(n=flavor.order + palette[accent].order) }}',
+  id: '{{ read_file(path="uuids.txt") | split(pat="\n") | nth(n=flavor.order * 14 + palette[accent].order) }}',
   base: '{% if flavor.dark %}dark{% else %}light{% endif %}',
   name: 'Catppuccin {{ flavor.name }} {{ accent | capitalize }}',
   props: {
