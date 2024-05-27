@@ -4,7 +4,7 @@ whiskers:
   matrix:
     - accent
     - flavor
-  filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}.json5"
+  filename: "src/themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}.json5"
 ---
 
 {%- set palette = flavor.colors -%}
