@@ -1,5 +1,5 @@
 {
-  id: '$uuid',
+  id: '10ececda-0979-488a-812a-29968899bd86',
   base: 'dark',
   name: 'Catppuccin Frappé Flamingo',
   props: {

@@ -1,5 +1,5 @@
 {
-  id: '$uuid',
+  id: 'f5110364-ab47-4d38-a2dd-7a6bba48ca8e',
   base: 'dark',
   name: 'Catppuccin Frappé Green',
   props: {

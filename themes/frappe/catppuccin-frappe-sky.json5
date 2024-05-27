@@ -1,5 +1,5 @@
 {
-  id: '$uuid',
+  id: 'cfea510d-dad1-4930-b602-1c5b02352d79',
   base: 'dark',
   name: 'Catppuccin Frappé Sky',
   props: {

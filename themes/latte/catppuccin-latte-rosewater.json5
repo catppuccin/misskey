@@ -1,5 +1,5 @@
 {
-  id: '$uuid',
+  id: 'fdc604f8-2dc4-4ed7-baf1-4dc5e94fd0a3',
   base: 'light',
   name: 'Catppuccin Latte Rosewater',
   props: {

@@ -1,7 +1,6 @@
 ---
-uuids:
 whiskers:
-  version: 2.1.0
+  version: "2.3.0"
   matrix:
     - accent
     - flavor
@@ -11,7 +10,7 @@ whiskers:
 {%- set palette = flavor.colors -%}
 
 {
-  id: '$uuid',
+  id: '{{ read_file(path="uuids.txt") | split(pat="\n") | nth(n=flavor.order + palette[accent].order) }}',
   base: '{% if flavor.dark %}dark{% else %}light{% endif %}',
   name: 'Catppuccin {{ flavor.name }} {{ accent | capitalize }}',
   props: {

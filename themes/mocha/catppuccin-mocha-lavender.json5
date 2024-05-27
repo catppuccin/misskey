@@ -1,5 +1,5 @@
 {
-  id: '$uuid',
+  id: '9c1ad601-df61-4135-8598-a5bfbd8560b6',
   base: 'dark',
   name: 'Catppuccin Mocha Lavender',
   props: {

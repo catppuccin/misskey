@@ -1,5 +1,5 @@
 {
-  id: '$uuid',
+  id: 'e09e1abc-4abf-460c-b5c6-8acd6c508a22',
   base: 'dark',
   name: 'Catppuccin Macchiato Red',
   props: {
