@@ -47,7 +47,7 @@ whiskers:
     header: ':alpha<0.7<@panel',
     infoBg: '#{{ surface0.hex }}',
     infoFg: '#{{ subtext0.hex }}',
-    renote: '#{{ blue.hex }}',
+    renote: '@accent',
     shadow: 'rgba(0, 0, 0, 0.3)',
     divider: 'rgba(255, 255, 255, 0.1)',
     hashtag: '#{{ sapphire.hex }}',
